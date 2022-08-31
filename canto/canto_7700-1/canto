@@ -77,23 +77,11 @@ rm $HOME/.cantod/config/genesis.json
 wget -O $HOME/.cantod/config/genesis.json "https://raw.githubusercontent.com/StakeTake/guidecosmos/main/canto/canto_7700-1/genesis.json"
 wget -O $HOME/.cantod/config/addrbook.json "https://raw.githubusercontent.com/StakeTake/guidecosmos/main/canto/canto_7700-1/addrbook.json"
 
-SEEDS=""
+SEEDS="ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:55656"
 PEERS="ef45c32b232b772dd82b2f801f0e6abd3842e66c@164.90.154.41:26656"; \
 sed -i.bak -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.cantod/config/config.toml
 
 
-# config pruning
-indexer="null"
-pruning="custom"
-pruning_keep_recent="100"
-pruning_keep_every="0"
-pruning_interval="10"
-
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.cantod/config/config.toml
-sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.cantod/config/app.toml
-sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.cantod/config/app.toml
-sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.cantod/config/app.toml
-sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.cantod/config/app.toml
 
 
 
