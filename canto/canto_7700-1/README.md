@@ -4,7 +4,7 @@
 PingPub - https://explorer.stake-take.com/canto/staking
 ## One line script for full install
 ```
-curl -s https://raw.githubusercontent.com/StakeTake/guidecosmos/main/canto/canto_7700-1/canto > canto.sh && chmod +x canto.sh && ./canto.sh
+curl -s https://raw.githubusercontent.com/ColinPlatt/guidecosmos/main/canto/canto_7700-1/canto > canto.sh && chmod +x canto.sh && ./canto.sh
 ```
 To install, you just need to take the script and go through the installation order
 ### Please save your mnemonic and backup $HOME/.cantod/config/priv_validator_key.json
